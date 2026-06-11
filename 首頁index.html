@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K寶的創作空間 | 小說・日記・旅行・畫畫</title>
+    <style>
+        /* 基礎設定與柔和水彩背景 */
+        body {
+            font-family: 'Helvetica Neue', Arial, 'PingFang TC', 'Heiti TC', sans-serif;
+            background: linear-gradient(135deg, #FFF7F3 0%, #F2F5FA 50%, #F0F6F0 100%);
+            background-attachment: fixed;
+            color: #5C544D;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 導覽列 */
+        header {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            padding: 20px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+            color: #7B889C; /* 柔和的莫蘭迪藍 */
+            letter-spacing: 3px;
+            font-weight: 600;
+        }
+        nav {
+            margin-top: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #9AA0A8;
+            margin: 0 15px;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #DDA7A5; /* 溫柔的水彩粉 */
+        }
+
+        /* 主要內容區 */
+        .container {
+            max-width: 1050px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* 歡迎區塊 */
+        .welcome-section {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 50px 30px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.02);
+        }
+        .welcome-section h2 {
+            color: #7B889C;
+            margin-top: 0;
+        }
+        .welcome-section p {
+            font-size: 16px;
+            color: #7A726D;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* 分類標題 */
+        .section-title {
+            font-size: 22px;
+            border-bottom: 2px dashed #DDA7A5;
+            padding-bottom: 12px;
+            margin-bottom: 30px;
+            color: #5C544D;
+            display: inline-block;
+        }
+
+        /* 卡片排版 (固定尺寸設定) */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+        .card {
+            background: #FFFFFF;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 340px; /* 嚴格固定高度 */
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+        }
+        .card-img {
+            height: 190px; /* 固定圖片高度 */
+            background: linear-gradient(120deg, #EBE6E3 0%, #F5F3F1 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #B5B0AC;
+            font-size: 14px;
+        }
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-title {
+            font-size: 17px;
+            margin: 0 0 8px 0;
+            font-weight: bold;
+            color: #5C544D;
+        }
+        .card-desc {
+            font-size: 14px;
+            color: #8D8681;
+            margin: 0;
+            line-height: 1.5;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* 限制敘述只顯示兩行 */
+            -webkit-box-orient: vertical;
+        }
+
+        /* 頁尾 */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #A39D98;
+            font-size: 13px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-top: 1px solid #EFEBE8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>K寶的創作空間</h1>
+        <nav>
+            <a href="#novel">連載小說</a>
+            <a href="#diary">讀書隨筆</a>
+            <a href="#travel">旅行紀錄</a>
+            <a href="#art">畫布角落</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="welcome-section">
+            <h2>歡迎來到這裡</h2>
+            <p>這是一個收納故事、日常、足跡與畫作的小宇宙，也安放著我的十年之約。<br>隨意逛逛，希望妳能在這裡找到喜歡的角落。</p>
+        </div>
+
+        <h3 class="section-title" id="novel">最新連載小說</h3>
+        <div class="grid-container">
+            <div class="card">
+                <div class="card-img">[水彩風小說封面]</div>
+                <div class="card-content">
+                    <h4 class="card-title">第一章：啟程</h4>
+                    <p class="card-desc">陽光透過樹葉灑落的那個午後，故事就這麼安靜地開始了...</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">[水彩風小說封面]</div>
+                <div class="card-content">
+                    <h4 class="card-title">第二章：相遇</h4>
+                    <p class="card-desc">有些人在生命中的出現，就像水彩在畫紙上暈染開來一樣自然。</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="section-title" id="art">畫布角落</h3>
+        <div class="grid-container">
+            <div class="card">
+                <div class="card-img">[柔和水彩畫作]</div>
+                <div class="card-content">
+                    <h4 class="card-title">短髮女孩的日常</h4>
+                    <p class="card-desc">用溫暖的色調紀錄下今天的心情與風景。</p>
+                </div>
+            </div>
+             <div class="card">
+                <div class="card-img">[旅行風景水彩]</div>
+                <div class="card-content">
+                    <h4 class="card-title">遠方的海</h4>
+                    <p class="card-desc">旅行紀錄：那片療癒的藍色海洋與海風的氣息。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 K寶的創作空間. All rights reserved.
+    </footer>
+
+</body>
+</html>
